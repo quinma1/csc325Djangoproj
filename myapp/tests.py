@@ -26,3 +26,7 @@ class InfoApiTests(TestCase):
     def test_info_returns_student(self):
         data = self.client.get(reverse('info')).json()
         self.assertEqual(data['student'], 'Matt')
+
+    def test_info_returns_semester(self):
+        data = self.client.get(reverse('info')).json()
+        self.assertEqual(data['semester'], 'Fall 2026')

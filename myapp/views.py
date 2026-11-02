@@ -13,4 +13,4 @@ def about(request):
 
 @api_view(["GET"])
 def info(request):
-        return Response({"course": "CSC325", "project": "Django CI/CD", 'student': 'Matt'}) 
+        return Response({"course": "CSC325", "project": "Django CI/CD", 'student': 'Matt','semester': 'Fall 2026'}) 
