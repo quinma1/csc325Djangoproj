@@ -22,3 +22,7 @@ class InfoApiTests(TestCase):
     def test_info_returns_project(self):
         data = self.client.get(reverse('info')).json()
         self.assertEqual(data['project'], 'Django CI/CD')
+
+    def test_info_returns_student(self):
+        data = self.client.get(reverse('info')).json()
+        self.assertEqual(data['student'], 'Matt')
